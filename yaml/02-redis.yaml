@@ -29,7 +29,7 @@ spec:
       containers:
         - name: redis
           image: hifrodo/crud2-redis:1.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - name: redis
               containerPort: 6379

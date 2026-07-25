@@ -7,7 +7,7 @@ React 프론트엔드, FastAPI API, MySQL 8.0 데이터베이스와 Redis 세션
 | 역할 | 이미지 |
 | --- | --- |
 | React + Nginx 프론트엔드 | `hifrodo/crud2-front:1.0` |
-| FastAPI API | `hifrodo/crud2-api:1.1` |
+| FastAPI API | `hifrodo/crud2-api:1.0` |
 | MySQL 데이터베이스 | `hifrodo/crud2-sql:1.0` |
 | Redis 세션 저장소 | `hifrodo/crud2-redis:1.0` |
 
@@ -116,12 +116,12 @@ StatefulSet을 삭제해도 MySQL과 Redis의 PVC는 데이터 보호를 위해 
 
 ```powershell
 docker build -f db/Dockerfile -t hifrodo/crud2-sql:1.0 db
-docker build -f app/Dockerfile -t hifrodo/crud2-api:1.1 .
+docker build -f app/Dockerfile -t hifrodo/crud2-api:1.0 .
 docker build -f frontend/Dockerfile -t hifrodo/crud2-front:1.0 frontend
 docker build -f redis/Dockerfile -t hifrodo/crud2-redis:1.0 redis
 
 docker push hifrodo/crud2-sql:1.0
-docker push hifrodo/crud2-api:1.1
+docker push hifrodo/crud2-api:1.0
 docker push hifrodo/crud2-front:1.0
 docker push hifrodo/crud2-redis:1.0
 ```

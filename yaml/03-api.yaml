@@ -27,8 +27,8 @@ spec:
     spec:
       containers:
         - name: api
-          image: hifrodo/crud2-api:1.1
-          imagePullPolicy: IfNotPresent
+          image: hifrodo/crud2-api:1.0
+          imagePullPolicy: Always
           env:
             - name: MYSQL_HOST
               value: db-svc
